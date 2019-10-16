@@ -1,107 +1,70 @@
-import { TabBar } from 'antd-mobile';
-import React from 'react';
-import {withRouter} from 'react-router-dom'
+import { TabBar } from "antd-mobile";
+import React from "react";
+import { withRouter } from "react-router-dom";
+import './index.css';
 class HKLayout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'redTab'
+      selectedTab: "redTab"
     };
   }
 
-
   render() {
     return (
-      <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0 }}>
+      <div style={{ position: "fixed", height: "100%", width: "100%", top: 0 }}>
         <TabBar
           unselectedTintColor="#949494"
-          tintColor="#33A3F4"
+          tintColor="#5fcc9e"
           barTintColor="white"
         >
           <TabBar.Item
-            title="Life"
-            key="Life"
-            icon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
-            />
-            }
-            selectedIcon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
-            />
-            }
-            selected={this.props.location.pathname  === '/'}
-            badge={1}
+            title="首页"
+            key="home"
+            icon={<i className="iconfont icon-ind" />}
+            selectedIcon={<i className="iconfont icon-ind" />}
+            selected={this.props.location.pathname === "/"}
             onPress={() => {
-              this.props.history.push('/')
+              this.props.history.push("/");
             }}
           >
-           {this.props.location.pathname  === '/' && this.props.children}
+            {this.props.location.pathname === "/" && this.props.children}
           </TabBar.Item>
           <TabBar.Item
-            icon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat' }}
-              />
-            }
-            selectedIcon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat' }}
-              />
-            }
-            title="Koubei"
-            key="Koubei"
-            badge={'new'}
-            selected={this.props.location.pathname  === '/List'}
+            icon={<i className="iconfont icon-findHouse" />}
+            selectedIcon={<i className="iconfont icon-findHouse" />}
+            title="找房"
+            key="list"
+            selected={this.props.location.pathname === "/List"}
             onPress={() => {
-              this.props.history.push('/List')
+              this.props.history.push("/List");
             }}
           >
-           {this.props.location.pathname  === '/List' && this.props.children}
+            {this.props.location.pathname === "/List" && this.props.children}
           </TabBar.Item>
           <TabBar.Item
-            icon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat' }}
-              />
-            }
-            selectedIcon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat' }}
-              />
-            }
-            title="Friend"
-            key="Friend"
-            dot
-            selected={this.props.location.pathname  === '/News'}
+            icon={<i className="iconfont icon-infom" />}
+            selectedIcon={<i className="iconfont icon-infom" />}
+            title="资讯"
+            key="news"
+            selected={this.props.location.pathname === "/News"}
             onPress={() => {
-              this.props.history.push('/News')
+              this.props.history.push("/News");
             }}
           >
-           {this.props.location.pathname  === '/News' && this.props.children}           
+            {this.props.location.pathname === "/News" && this.props.children}
           </TabBar.Item>
           <TabBar.Item
-            icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
-            selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
-            title="My"
+            icon={ <i className="iconfont icon-my" />   }
+            selectedIcon={<i className="iconfont icon-my" />}
+            title="我的"
             key="my"
-            selected={this.props.location.pathname  === '/My'}
+            selected={this.props.location.pathname === "/My"}
             onPress={() => {
-              this.props.history.push('/My')
+              this.props.history.push("/My");
             }}
           >
-           {this.props.location.pathname  === '/My' && this.props.children}           
+            {this.props.location.pathname === "/My" && this.props.children}
           </TabBar.Item>
         </TabBar>
       </div>
