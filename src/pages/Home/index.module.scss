@@ -1,3 +1,16 @@
+// 轮播图 开始
+  .index_carousel{
+    position: relative;
+    .index_search{
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+  }
+// 轮播图 结束
+
 // 导航栏 开始
 .hk_nav {
     display: flex;
