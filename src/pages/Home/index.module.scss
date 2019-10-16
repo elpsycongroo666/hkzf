@@ -1,0 +1,129 @@
+// 导航栏 开始
+.hk_nav {
+    display: flex;
+    background-color: #fff;
+    padding: 10px 0;
+    .nav_item {
+      text-align: center;
+        img {
+        width: 50%;
+      }
+      .nav_text {
+        margin-top: 5px;
+        font-size: 13px;
+        color: #666;
+      }
+    }
+  }
+// 导航栏 结束
+
+// 房租小组 开始
+.group {
+  padding: 0 10px;
+  .group_title {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    line-height: 50px;
+    span {
+      color: #787d82;
+    }
+    span:first-child{
+      font-weight: 700;
+      font-size: 14px;
+      color: #333;
+      text-indent: 10px;
+    }
+  }
+
+  .group_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .group_item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48%;
+      background-color: #fff;
+      margin-bottom: 10px;
+      padding: 20px;
+      .group_info {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        .info_name1 {
+          font-size: 13px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+
+        .info_name2 {
+          color: #666666;
+          font-size: 12px;
+        }
+      }
+
+      .group_img_wrap {
+        display: flex;
+        justify-content: center;
+        flex:1;
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+// 房租小组 结束
+
+// 最新资讯
+.news {
+  background-color: #fff;
+  padding: 20px;
+  padding-bottom: 0px;
+  .news_title {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .news_content {
+    .news_item {
+      display: flex;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 15px 0;
+      .item_img {
+        flex:1;
+        img {
+          width: 100%;
+        }
+      }
+
+      .item_text {
+        display: flex;
+        flex: 2;
+        padding-left: 12px;
+        flex-direction: column;
+        justify-content: space-between;
+        .text_title {
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        .text_desc {
+          display: flex;
+          justify-content: space-between;
+          span {
+            color: #9c9fa1;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+// 最新资讯

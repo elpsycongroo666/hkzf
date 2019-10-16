@@ -39,7 +39,7 @@ class HKLayout extends React.Component {
               this.props.history.push('/')
             }}
           >
-           {this.props.children}
+           {this.props.location.pathname  === '/' && this.props.children}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -64,7 +64,7 @@ class HKLayout extends React.Component {
               this.props.history.push('/List')
             }}
           >
-           {this.props.children}
+           {this.props.location.pathname  === '/List' && this.props.children}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -89,7 +89,7 @@ class HKLayout extends React.Component {
               this.props.history.push('/News')
             }}
           >
-           {this.props.children}            
+           {this.props.location.pathname  === '/News' && this.props.children}           
           </TabBar.Item>
           <TabBar.Item
             icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
@@ -101,7 +101,7 @@ class HKLayout extends React.Component {
               this.props.history.push('/My')
             }}
           >
-           {this.props.children}            
+           {this.props.location.pathname  === '/My' && this.props.children}           
           </TabBar.Item>
         </TabBar>
       </div>

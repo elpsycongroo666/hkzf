@@ -1,8 +1,5 @@
 import axios from 'axios'
-
-// 获取 配置文件中 baseurl
-const baseUrl = process.env.REACT_APP_API_URL;
-
+import {baseUrl} from './url'
 // axios.get
 // 定义公共的url
 var instance = axios.create({
